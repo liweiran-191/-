@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #E6F2FF;
+}
+
+QMenuBar {
+    background-color: #D4E6F9;
+    border-bottom: 1px solid #A9C6E8;
+}
+
+QStatusBar {
+    background-color: #D4E6F9;
+    border-top: 1px solid #A9C6E8;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string>QWidget#centralwidget {
+    background-color: #E6F2FF;
+    border: 1px solid #A9C6E8;
+}</string>
+   </property>
+   <widget class="QGraphicsView" name="showsqldo">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>631</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 2px solid #7BAAE8; 
+background-color: #F0F8FF;</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="insertsql">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>280</y>
+      <width>631</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::FocusPolicy::TabFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string>border: 2px solid #5B9BD5; 
+background-color: #EAF1F9; 
+padding: 5px;</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="tree">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>171</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>border: 2px solid #6B9AC7; 
+background-color: #E1EEFF; 
+padding: 2px;
+QTreeView::item { padding: 2px; }</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>databses</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>新建子项目</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新建项目</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新建项目</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新建项目</string>
+      </property>
+     </item>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>260</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>5</width>
+      <height>5</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>color: #3A75C4; 
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>终端：请输入sql语句</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>0</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="howtoshow">
+     <item>
+      <widget class="QPushButton" name="changeinui">
+       <property name="styleSheet">
+        <string>QPushButton {
+    background-color: #6B9AC7;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #8BB8E8;
+}
+
+QPushButton:pressed {
+    background-color: #4A7CAE;
+}</string>
+       </property>
+       <property name="text">
+        <string>图形表</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="uishow">
+       <property name="styleSheet">
+        <string>QPushButton {
+    background-color: #5B9BD5;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #7BAAE8;
+}
+
+QPushButton:pressed {
+    background-color: #4A7CAE;
+}</string>
+       </property>
+       <property name="text">
+        <string>视图</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>0</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="base">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string>color: #333333;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>连接数据库：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="basename">
+       <property name="styleSheet">
+        <string>color: #0F9D58;
+font-weight: bold;
+padding: 2px;
+background-color: #E8F5E9;
+border-radius: 3px;</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QMenuBar::item {
+    background-color: transparent;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #4285F4;
+    color: white;
+}
+
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    padding: 5px;
+}
+
+QMenu::item {
+    padding: 5px 30px 5px 20px;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+QMenu::item:selected {
+    background-color: #E8F0FE;
+    color: #1A73E8;
+}</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actiongithub"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>连接数据库</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>断开连接</string>
+   </property>
+  </action>
+  <action name="actiongithub">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>github</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
