@@ -1,31 +1,47 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "user.h"
+#include <QMenuBar>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    
+    setWindowTitle("DBMS 7.0");
     // 设置主窗口样式
     this->setStyleSheet(QStringLiteral("background: #E6F2FF;"));
-    
-    // 为各组件添加额外样式，增强界面元素之间的区分度
-    ui->showsqldo->setFrameShadow(QFrame::Raised);
-    ui->showsqldo->setLineWidth(2);
-    
-    ui->insertsql->setFrameShadow(QFrame::Raised);
-    ui->insertsql->setLineWidth(2);
-    
-    ui->tree->setFrameShadow(QFrame::Raised);
-    ui->tree->setLineWidth(2);
-    
-    // 设置状态栏样式
-    statusBar()->setStyleSheet("QStatusBar{border-top: 2px solid #A9C6E8; padding: 3px; background: #D4E6F9;}");
-    statusBar()->showMessage("就绪");
+    ui->biao->setVisible(0);
+    loadDatabaseTree();  // 新增初始化调用
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_changeinui_clicked()
+{
+    ui->biao->setVisible(1);
+}
+
+
+void MainWindow::on_uishow_clicked()
+{
+   ui->biao->setVisible(0);
+}
+
+
+void MainWindow::loadDatabaseTree()
+{
+    ui->tree->clear();
+    QTreeWidgetItem *rootItem = new QTreeWidgetItem(ui->tree);
+    rootItem->setText(0, "我的数据库");
+
+    for (const std::string &dbName : UserManager::getUser().dbnames) {
+        QTreeWidgetItem *childItem = new QTreeWidgetItem(rootItem);
+        childItem->setText(0, QString::fromStdString(dbName));
+    }
+    ui->tree->expandAll();
+}
+

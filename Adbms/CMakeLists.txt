@@ -23,7 +23,9 @@ qt_add_executable(Adbms
     login.h login.cpp login.ui
     database.h database.cpp
     table.h table.cpp
-    user.h user.cpp # 添加的文件
+    user.h user.cpp
+    global.h global.cpp
+    turple.h turple.cpp
 )
 
 target_link_libraries(Adbms

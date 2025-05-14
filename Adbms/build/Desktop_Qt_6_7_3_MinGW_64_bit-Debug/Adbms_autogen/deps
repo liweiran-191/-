@@ -90,35 +90,39 @@ Adbms_autogen/timestamp: \
 	D:/programs/mingw/share/cmake-3.23/Modules/Platform/Windows-windres.cmake \
 	D:/programs/mingw/share/cmake-3.23/Modules/Platform/Windows.cmake \
 	D:/programs/mingw/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake \
-	D:/qtmake/Adbms/CMakeLists.txt \
-	D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
-	D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/moc_predefs.h \
-	D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake \
-	D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeRCCompiler.cmake \
-	D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeSystem.cmake \
-	D:/qtmake/Adbms/database.cpp \
-	D:/qtmake/Adbms/database.h \
-	D:/qtmake/Adbms/ddlparser.cpp \
-	D:/qtmake/Adbms/ddlparser.h \
-	D:/qtmake/Adbms/dmlparser.cpp \
-	D:/qtmake/Adbms/dmlparser.h \
-	D:/qtmake/Adbms/exception.h \
-	D:/qtmake/Adbms/executor.cpp \
-	D:/qtmake/Adbms/executor.h \
-	D:/qtmake/Adbms/lexer.cpp \
-	D:/qtmake/Adbms/lexer.h \
-	D:/qtmake/Adbms/login.cpp \
-	D:/qtmake/Adbms/login.h \
-	D:/qtmake/Adbms/main.cpp \
-	D:/qtmake/Adbms/mainwindow.cpp \
-	D:/qtmake/Adbms/mainwindow.h \
-	D:/qtmake/Adbms/parser.cpp \
-	D:/qtmake/Adbms/parser.h \
-	D:/qtmake/Adbms/statement.h \
-	D:/qtmake/Adbms/table.cpp \
-	D:/qtmake/Adbms/table.h \
-	D:/qtmake/Adbms/user.cpp \
-	D:/qtmake/Adbms/user.h \
+	D:/qtmake/user/Adbms/CMakeLists.txt \
+	D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
+	D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/moc_predefs.h \
+	D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake \
+	D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeRCCompiler.cmake \
+	D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeSystem.cmake \
+	D:/qtmake/user/Adbms/database.cpp \
+	D:/qtmake/user/Adbms/database.h \
+	D:/qtmake/user/Adbms/ddlparser.cpp \
+	D:/qtmake/user/Adbms/ddlparser.h \
+	D:/qtmake/user/Adbms/dmlparser.cpp \
+	D:/qtmake/user/Adbms/dmlparser.h \
+	D:/qtmake/user/Adbms/exception.h \
+	D:/qtmake/user/Adbms/executor.cpp \
+	D:/qtmake/user/Adbms/executor.h \
+	D:/qtmake/user/Adbms/global.cpp \
+	D:/qtmake/user/Adbms/global.h \
+	D:/qtmake/user/Adbms/lexer.cpp \
+	D:/qtmake/user/Adbms/lexer.h \
+	D:/qtmake/user/Adbms/login.cpp \
+	D:/qtmake/user/Adbms/login.h \
+	D:/qtmake/user/Adbms/main.cpp \
+	D:/qtmake/user/Adbms/mainwindow.cpp \
+	D:/qtmake/user/Adbms/mainwindow.h \
+	D:/qtmake/user/Adbms/parser.cpp \
+	D:/qtmake/user/Adbms/parser.h \
+	D:/qtmake/user/Adbms/statement.h \
+	D:/qtmake/user/Adbms/table.cpp \
+	D:/qtmake/user/Adbms/table.h \
+	D:/qtmake/user/Adbms/turple.cpp \
+	D:/qtmake/user/Adbms/turple.h \
+	D:/qtmake/user/Adbms/user.cpp \
+	D:/qtmake/user/Adbms/user.h \
 	F:/QT/6.7.3/mingw_64/include/QtCore/q20functional.h \
 	F:/QT/6.7.3/mingw_64/include/QtCore/q20memory.h \
 	F:/QT/6.7.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -635,6 +639,6 @@ Adbms_autogen/timestamp: \
 	F:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
 	F:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
 	F:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-	D:/qtmake/Adbms/login.ui \
-	D:/qtmake/Adbms/mainwindow.ui \
+	D:/qtmake/user/Adbms/login.ui \
+	D:/qtmake/user/Adbms/mainwindow.ui \
 	D:/programs/mingw/bin/cmake.exe

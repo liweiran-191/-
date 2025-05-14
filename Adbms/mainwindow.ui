@@ -6,101 +6,166 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>801</width>
-    <height>513</height>
+    <width>1035</width>
+    <height>690</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1035</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1035</width>
+    <height>690</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string>QMainWindow {
-    background-color: #E6F2FF;
+   <string notr="true">
+/* 全局样式 */
+QWidget {
+    color: #E0F7FA;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+}
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #1A237E, stop:1 #0D47A1);
+}
+
+QPushButton {
+    background-color: rgba(0, 229, 255, 0.1);
+    color: #E0F7FA;
+    border: 2px solid #00E5FF;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+}
+
+QTreeView::item:hover { 
+    background-color: rgba(0, 229, 255, 0.15);
+    border: 1px solid #00E5FF;
+}
+
+QTableView {
+    background: transparent;
+    gridline-color: rgba(0, 229, 255, 0.3);
+    border: 2px solid #00E5FF;
+    border-radius: 6px;
+}
+
+QHeaderView::section {
+    background-color: #1A237E;
+    color: #E0F7FA;
+    padding: 4px;
+    border: 1px solid #00E5FF;
 }
 
 QMenuBar {
-    background-color: #D4E6F9;
-    border-bottom: 1px solid #A9C6E8;
+    background-color: #1E2A38;
+    border-bottom: 1px solid #2C3E50;
+    color: #E0E0E0;
 }
 
 QStatusBar {
-    background-color: #D4E6F9;
-    border-top: 1px solid #A9C6E8;
-}</string>
+    background-color: #1E2A38;
+    border-top: 1px solid #2C3E50;
+    color: #E0E0E0;
+}
+
+QTreeView::item {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+QTreeView::item:selected {
+    background-color: rgba(0, 229, 255, 0.3);
+    border-color: #00E5FF;
+}
+
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1A237E, stop:1 #0D47A1);
+    border-top: 2px solid #00E5FF;
+    color: #E0F7FA;
+}
+QTreeView::item:selected {
+    background-color: #2980B9;
+    color: #FFFFFF;
+}
+
+QTreeView::item:hover {
+    background-color: #34495E;
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string>QWidget#centralwidget {
-    background-color: #E6F2FF;
-    border: 1px solid #A9C6E8;
+    background-color: #192231;
+    border: 1px solid #2C3E50;
 }</string>
    </property>
    <widget class="QGraphicsView" name="showsqldo">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>260</x>
       <y>20</y>
-      <width>631</width>
-      <height>241</height>
+      <width>771</width>
+      <height>271</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string>border: 2px solid #7BAAE8; 
-background-color: #F0F8FF;</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="insertsql">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>280</y>
-      <width>631</width>
-      <height>201</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>true</underline>
-      <strikeout>false</strikeout>
-     </font>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::FocusPolicy::TabFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string>border: 2px solid #5B9BD5; 
-background-color: #EAF1F9; 
-padding: 5px;</string>
+     <string>border: 2px solid #3498DB; 
+background-color: #1F2B38;
+border-radius: 5px;
+color: #E0E0E0;</string>
     </property>
    </widget>
    <widget class="QTreeWidget" name="tree">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
-      <width>171</width>
-      <height>461</height>
+      <y>0</y>
+      <width>261</width>
+      <height>651</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string>border: 2px solid #6B9AC7; 
-background-color: #E1EEFF; 
+     <string>border: 2px solid #3498DB; 
+background-color: #1F2B38; 
 padding: 2px;
-QTreeView::item { padding: 2px; }</string>
+border-radius: 5px;
+color: #E0E0E0;
+
+QTreeView::item { 
+    padding: 4px; 
+    border-radius: 2px;
+}
+
+QTreeView::item:selected { 
+    background-color: #2980B9; 
+    color: #FFFFFF;
+}
+
+QTreeView::item:hover { 
+    background-color: #34495E; 
+}</string>
     </property>
     <column>
      <property name="text">
       <string>databses</string>
      </property>
     </column>
-    <item>
-     <property name="text">
-      <string>新建项目</string>
-     </property>
-    </item>
     <item>
      <property name="text">
       <string>新建项目</string>
@@ -127,11 +192,11 @@ QTreeView::item { padding: 2px; }</string>
      </item>
     </item>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="zhanshi">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>260</y>
+      <x>550</x>
+      <y>300</y>
       <width>291</width>
       <height>20</height>
      </rect>
@@ -144,6 +209,7 @@ QTreeView::item { padding: 2px; }</string>
     </property>
     <property name="font">
      <font>
+      <family>Segoe UI</family>
       <pointsize>15</pointsize>
       <italic>true</italic>
       <bold>true</bold>
@@ -151,8 +217,9 @@ QTreeView::item { padding: 2px; }</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string>color: #3A75C4; 
-background-color: transparent;</string>
+     <string notr="true">color: #3498DB; 
+background-color: transparent;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);</string>
     </property>
     <property name="text">
      <string>终端：请输入sql语句</string>
@@ -161,7 +228,7 @@ background-color: transparent;</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>390</x>
       <y>0</y>
       <width>191</width>
       <height>20</height>
@@ -172,19 +239,21 @@ background-color: transparent;</string>
       <widget class="QPushButton" name="changeinui">
        <property name="styleSheet">
         <string>QPushButton {
-    background-color: #6B9AC7;
+    background-color: #2980B9;
     color: white;
     border-radius: 4px;
     padding: 2px 8px;
     border: none;
+    font-weight: bold;
 }
 
 QPushButton:hover {
-    background-color: #8BB8E8;
+    background-color: #3498DB;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 QPushButton:pressed {
-    background-color: #4A7CAE;
+    background-color: #1A5276;
 }</string>
        </property>
        <property name="text">
@@ -196,19 +265,21 @@ QPushButton:pressed {
       <widget class="QPushButton" name="uishow">
        <property name="styleSheet">
         <string>QPushButton {
-    background-color: #5B9BD5;
+    background-color: #16A085;
     color: white;
     border-radius: 4px;
     padding: 2px 8px;
     border: none;
+    font-weight: bold;
 }
 
 QPushButton:hover {
-    background-color: #7BAAE8;
+    background-color: #1ABC9C;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 QPushButton:pressed {
-    background-color: #4A7CAE;
+    background-color: #0E6655;
 }</string>
        </property>
        <property name="text">
@@ -221,7 +292,7 @@ QPushButton:pressed {
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>260</x>
       <y>0</y>
       <width>131</width>
       <height>21</height>
@@ -231,7 +302,7 @@ QPushButton:pressed {
      <item>
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string>color: #333333;
+        <string>color: #3498DB;
 font-weight: bold;</string>
        </property>
        <property name="text">
@@ -242,11 +313,12 @@ font-weight: bold;</string>
      <item>
       <widget class="QLabel" name="basename">
        <property name="styleSheet">
-        <string>color: #0F9D58;
+        <string>color: #1ABC9C;
 font-weight: bold;
-padding: 2px;
-background-color: #E8F5E9;
-border-radius: 3px;</string>
+padding: 2px 5px;
+background-color: rgba(26, 188, 156, 0.2);
+border-radius: 3px;
+border: 1px solid #1ABC9C;</string>
        </property>
        <property name="text">
         <string>TextLabel</string>
@@ -255,13 +327,65 @@ border-radius: 3px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QScrollArea" name="biao">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>20</y>
+      <width>771</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>769</width>
+       <height>269</height>
+      </rect>
+     </property>
+     <widget class="QTableView" name="biaodetail">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>271</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTextEdit" name="insertsql">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>330</y>
+      <width>771</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #263238;
+border: 1px solid #3498DB;
+border-radius: 5px;
+color: #E0E0E0;
+padding: 5px;
+font-family: &quot;Consolas&quot;, monospace;
+</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>801</width>
+     <width>1035</width>
      <height>21</height>
     </rect>
    </property>
@@ -270,17 +394,19 @@ border-radius: 3px;</string>
     background-color: transparent;
     padding: 4px 8px;
     border-radius: 4px;
+    color: #E0E0E0;
 }
 
 QMenuBar::item:selected {
-    background-color: #4285F4;
+    background-color: #2980B9;
     color: white;
 }
 
 QMenu {
-    background-color: #FFFFFF;
-    border: 1px solid #BDBDBD;
+    background-color: #1E2A38;
+    border: 1px solid #2C3E50;
     padding: 5px;
+    color: #E0E0E0;
 }
 
 QMenu::item {
@@ -290,8 +416,8 @@ QMenu::item {
 }
 
 QMenu::item:selected {
-    background-color: #E8F0FE;
-    color: #1A73E8;
+    background-color: #2980B9;
+    color: white;
 }</string>
    </property>
    <widget class="QMenu" name="menu">

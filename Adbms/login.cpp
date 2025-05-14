@@ -10,11 +10,13 @@
 #include <QJsonObject>
 #include <QDebug>
 #include <QMessageBox>
+#include "global.h"
 login::login(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::login)
 {
     ui->setupUi(this);
+    setWindowTitle("请登录");
 }
 
 login::~login()
@@ -86,10 +88,13 @@ void login::on_olduser_pressed()
             QJsonObject rootObj = doc.object();
             QString QPassword = rootObj["password_hash"].toString(); // 读取字段
             if(QPassword.toStdString()==password){
+
                 this->close();
                 MainWindow *w = new MainWindow(this);
                 w->show();
                 qDebug()<<"Log in successly";
+                User temp(account,password,storage_path);
+                g_user=temp;
             }
             else{
                 //跳出弹窗提示密码错误

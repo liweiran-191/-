@@ -1,8 +1,12 @@
+// lexer.cpp
+// 此文件实现了词法分析器类
 #include "lexer.h"
 #include <QRegularExpression>
 
+// 构造函数，初始化输入的 SQL 语句
 Lexer::Lexer(const QString& input) : m_input(input) {}
 
+// 进行词法分析，返回 token 列表
 QList<Token> Lexer::tokenize() {
     QList<Token> tokens;
 
@@ -16,6 +20,8 @@ QList<Token> Lexer::tokenize() {
     return tokens;
 }
 
+// 获取下一个 token
+// 获取下一个 token
 Token Lexer::nextToken() {
     if (m_position >= m_input.length()) {
         return {TokenType::UNKNOWN, "", m_line, m_column};
@@ -26,6 +32,14 @@ Token Lexer::nextToken() {
     // 跳过空白字符
     if (current.isSpace()) {
         return readWhitespace();
+    }
+
+    // 通配符
+    if (current == '*') {
+        int start = m_position;
+        m_position++;
+        m_column++;
+        return {TokenType::WILDCARD, QString(current), m_line, start + 1};
     }
 
     // 标识符或关键字
@@ -44,7 +58,7 @@ Token Lexer::nextToken() {
     }
 
     // 操作符
-    static const QString operators = "+-*/%=<>!&|^~";
+    static const QString operators = "+-/%=<>!&|^~"; // 移除 *
     if (operators.contains(current)) {
         return readOperator();
     }
@@ -67,6 +81,7 @@ Token Lexer::nextToken() {
     return token;
 }
 
+// 跳过空白字符
 void Lexer::skipWhitespace() {
     while (m_position < m_input.length() && m_input[m_position].isSpace()) {
         if (m_input[m_position] == '\n') {
@@ -79,6 +94,7 @@ void Lexer::skipWhitespace() {
     }
 }
 
+// 读取单词（关键字或标识符）
 Token Lexer::readWord() {
     int start = m_position;
     while (m_position < m_input.length() && (m_input[m_position].isLetterOrNumber() || m_input[m_position] == '_' || m_input[m_position] == '`')) {
@@ -86,10 +102,14 @@ Token Lexer::readWord() {
         m_column++;
     }
     QString value = m_input.mid(start, m_position - start);
-    static const QStringList keywords = {"CREATE", "DROP", "DATABASE", "TABLE", "SELECT", "INSERT", "UPDATE", "DELETE", "PRIMARY", "KEY", "NOT", "NULL", "VARCHAR", "INT"};
-    TokenType type = keywords.contains(value) ? TokenType::KEYWORD : TokenType::IDENTIFIER; // Removed toUpper()
+    // 添加聚合函数到关键字列表
+    static const QStringList keywords = {"CREATE", "DROP", "DATABASE", "TABLE", "SELECT", "INSERT", "UPDATE", "DELETE", "PRIMARY", "KEY", "NOT", "NULL", "VARCHAR", "INT", "FROM", "WHERE", "GROUP", "BY", "HAVING", "ORDER", "ASC", "DESC", "INNER", "LEFT", "RIGHT", "FULL", "OUTER", "JOIN", "ON", "INTO", "VALUES", "SET", "SUM", "COUNT", "AVG", "MIN", "MAX"};
+    TokenType type = keywords.contains(value) ? TokenType::KEYWORD : TokenType::IDENTIFIER;
+    qDebug() << "Read word:" << value << "Type:" << static_cast<int>(type); // 添加调试信息
     return {type, value, m_line, start + 1};
 }
+
+// 读取数字
 Token Lexer::readNumber() {
     int start = m_position;
     while (m_position < m_input.length() && m_input[m_position].isDigit()) {
@@ -100,6 +120,7 @@ Token Lexer::readNumber() {
     return {TokenType::NUMBER_LITERAL, value, m_line, start + 1};
 }
 
+// 读取字符串
 Token Lexer::readString() {
     QChar quote = m_input[m_position];
     int start = m_position++;
@@ -121,6 +142,7 @@ Token Lexer::readString() {
     return {TokenType::STRING_LITERAL, value, m_line, start + 1};
 }
 
+// 读取操作符
 Token Lexer::readOperator() {
     int start = m_position;
     m_position++;
@@ -128,6 +150,7 @@ Token Lexer::readOperator() {
     return {TokenType::OPERATOR, m_input.mid(start, 1), m_line, start + 1};
 }
 
+// 读取标点符号
 Token Lexer::readPunctuation() {
     int start = m_position;
     m_position++;
@@ -135,6 +158,7 @@ Token Lexer::readPunctuation() {
     return {TokenType::PUNCTUATION, m_input.mid(start, 1), m_line, start + 1};
 }
 
+// 读取注释
 Token Lexer::readComment() {
     int start = m_position;
     if (m_input[m_position] == '#' || (m_input[m_position] == '-' && m_input[m_position + 1] == '-')) {
@@ -147,6 +171,7 @@ Token Lexer::readComment() {
     return {TokenType::COMMENT, value, m_line, start + 1};
 }
 
+// 读取空白字符
 Token Lexer::readWhitespace() {
     int start = m_position;
     skipWhitespace();

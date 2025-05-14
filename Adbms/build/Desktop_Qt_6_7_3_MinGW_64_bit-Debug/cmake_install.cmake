@@ -1,4 +1,4 @@
-# Install script for directory: D:/qtmake/Adbms
+# Install script for directory: D:/qtmake/user/Adbms
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Adbms.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Adbms.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -48,7 +48,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qt/deploy_Adbms_bcd8dbf978.cmake")
+  include("D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qt/deploy_Adbms_bcd8dbf978.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

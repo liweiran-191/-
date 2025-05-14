@@ -1,10 +1,18 @@
 #include "user.h"
 #include<iostream>
-// 在user.h中添加
+#include "database.h"
 #include <QJsonObject>    // JSON对象操作
 #include <QJsonDocument>  // JSON文档序列化
 #include <QFile>          // 文件操作
 #include <QCryptographicHash> // 密码加密
+
+// User g_user;
+
+User::User()
+{
+
+}
+
 User::User(std::string name,std::string password) {
 
     //用户名和密码
@@ -48,4 +56,112 @@ User::User(std::string name,std::string password) {
                   << configFile.errorString().toStdString()
                   << std::endl;
     }
+}
+
+User::User(std::string name, std::string password, std::filesystem::__cxx11::path path)
+{
+    this->name=name;
+    this->password=password;
+    this->storage_path=path;
+    //向dbnames中添加表空间名称
+    for (const auto& entry : std::filesystem::directory_iterator(path)) {
+        if (entry.is_directory()) {  // 判断是否为文件夹
+            this->dbnames.push_back(entry.path().filename().string());  // 提取名称
+        }
+    }
+
+}
+void User::setName(std::string name)
+{
+    this->name=name;
+}
+
+void User::setPass(std::string password)
+{
+    this->password=password;
+}
+
+void User::setStorage_path(std::filesystem::path path)
+{
+    this->storage_path=path;
+}
+
+void User::setDbnames(std::string name)
+{
+    this->dbnames.push_back(name);
+}
+
+void User::createDatabase(std::string dbname)
+{
+    if(this->has_db(dbname)){
+        //说明已经有了这个名字的database
+        qDebug()<<"the database has been set!";
+        return;
+    }
+    else{
+        //为database建立文件夹
+        std::filesystem::path DataBasePath=this->storage_path / dbname;
+        if(!std::filesystem::exists(DataBasePath)){
+            bool success =std::filesystem::create_directory(DataBasePath);
+            if(success) std::cout<<"DatabasePath build successfully!";
+        }
+        //向dbnames里添加这个数据库名
+        this->dbnames.push_back(dbname);
+
+    }
+    return;
+}
+
+void User::dropDatabase(std::string dbname)
+{
+    //先检查有无这个文件夹，如有则删除
+    try {
+        if (this->has_db(dbname) && std::filesystem::is_directory(this->storage_path / dbname)) {
+            std::filesystem::remove_all(this->storage_path / dbname);  // 递归删除所有子目录和文件
+            this->dbnames.erase(std::remove(this->dbnames.begin(), this->dbnames.end(), "test"), this->dbnames.end());
+            return;
+        }
+        else{
+            qDebug()<<"the database not exists!";
+            return;
+        }
+    } catch (const std::filesystem::filesystem_error& e) {
+        std::cerr << "Error" << e.what() << std::endl;
+        return;
+    }
+}
+
+database User::getDatabase(std::string dbname)
+{
+    if(this->has_db(dbname)){
+        database newdb;
+        newdb.setName(dbname);
+        newdb.setPath(this->storage_path / dbname);
+        newdb.setTables();
+        return newdb;
+    }
+    else{
+        qDebug()<<"database not found";
+        throw std::runtime_error("Database not found");
+    }
+}
+
+bool User::has_db(std::string name)
+{
+    auto it = std::find(this->dbnames.begin(), this->dbnames.end(),name);
+    if (it != this->dbnames.end()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void UserManager::setUser(const User& user)
+{
+    g_user = user;
+}
+
+User& UserManager::getUser()
+{
+    return g_user;
 }

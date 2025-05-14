@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen",
-	"CMAKE_BINARY_DIR" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "D:/qtmake/Adbms",
+	"BUILD_DIR" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen",
+	"CMAKE_BINARY_DIR" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/qtmake/user/Adbms",
 	"CMAKE_EXECUTABLE" : "D:/programs/mingw/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"D:/qtmake/Adbms/CMakeLists.txt",
-		"D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"D:/qtmake/user/Adbms/CMakeLists.txt",
+		"D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeSystem.cmake.in",
-		"D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeSystem.cmake",
+		"D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeSystem.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeNinjaFindMake.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake",
@@ -60,7 +60,7 @@
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in",
-		"D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake",
+		"D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeGenericSystem.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake",
@@ -75,7 +75,7 @@
 		"D:/programs/mingw/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeDetermineRCCompiler.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeRCCompiler.cmake.in",
-		"D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeRCCompiler.cmake",
+		"D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeRCCompiler.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeRCInformation.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/Platform/Windows-windres.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeTestRCCompiler.cmake",
@@ -91,7 +91,7 @@
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in",
-		"D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake",
+		"D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"F:/QT/6.7.3/mingw_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"F:/QT/6.7.3/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
@@ -323,62 +323,94 @@
 		"D:/programs/mingw/share/cmake-3.23/Modules/GNUInstallDirs.cmake",
 		"D:/programs/mingw/share/cmake-3.23/Modules/GNUInstallDirs.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "D:/qtmake/Adbms",
-	"DEP_FILE" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "D:/qtmake/user/Adbms",
+	"DEP_FILE" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Adbms_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"D:/qtmake/Adbms/database.h",
+			"D:/qtmake/user/Adbms/database.h",
 			"MU",
 			"EWIEGA46WW/moc_database.cpp",
 			null
 		],
 		[
-			"D:/qtmake/Adbms/ddlparser.h",
+			"D:/qtmake/user/Adbms/ddlparser.h",
 			"MU",
 			"EWIEGA46WW/moc_ddlparser.cpp",
 			null
 		],
 		[
-			"D:/qtmake/Adbms/dmlparser.h",
+			"D:/qtmake/user/Adbms/dmlparser.h",
 			"MU",
 			"EWIEGA46WW/moc_dmlparser.cpp",
 			null
 		],
 		[
-			"D:/qtmake/Adbms/exception.h",
+			"D:/qtmake/user/Adbms/exception.h",
 			"MU",
 			"EWIEGA46WW/moc_exception.cpp",
 			null
 		],
 		[
-			"D:/qtmake/Adbms/executor.h",
+			"D:/qtmake/user/Adbms/executor.h",
 			"MU",
 			"EWIEGA46WW/moc_executor.cpp",
 			null
 		],
-		[ "D:/qtmake/Adbms/lexer.h", "MU", "EWIEGA46WW/moc_lexer.cpp", null ],
-		[ "D:/qtmake/Adbms/login.h", "MU", "EWIEGA46WW/moc_login.cpp", null ],
 		[
-			"D:/qtmake/Adbms/mainwindow.h",
+			"D:/qtmake/user/Adbms/global.h",
+			"MU",
+			"EWIEGA46WW/moc_global.cpp",
+			null
+		],
+		[
+			"D:/qtmake/user/Adbms/lexer.h",
+			"MU",
+			"EWIEGA46WW/moc_lexer.cpp",
+			null
+		],
+		[
+			"D:/qtmake/user/Adbms/login.h",
+			"MU",
+			"EWIEGA46WW/moc_login.cpp",
+			null
+		],
+		[
+			"D:/qtmake/user/Adbms/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
 		],
-		[ "D:/qtmake/Adbms/parser.h", "MU", "EWIEGA46WW/moc_parser.cpp", null ],
 		[
-			"D:/qtmake/Adbms/statement.h",
+			"D:/qtmake/user/Adbms/parser.h",
+			"MU",
+			"EWIEGA46WW/moc_parser.cpp",
+			null
+		],
+		[
+			"D:/qtmake/user/Adbms/statement.h",
 			"MU",
 			"EWIEGA46WW/moc_statement.cpp",
 			null
 		],
-		[ "D:/qtmake/Adbms/table.h", "MU", "EWIEGA46WW/moc_table.cpp", null ],
-		[ "D:/qtmake/Adbms/user.h", "MU", "EWIEGA46WW/moc_user.cpp", null ]
+		[
+			"D:/qtmake/user/Adbms/table.h",
+			"MU",
+			"EWIEGA46WW/moc_table.cpp",
+			null
+		],
+		[
+			"D:/qtmake/user/Adbms/turple.h",
+			"MU",
+			"EWIEGA46WW/moc_turple.cpp",
+			null
+		],
+		[ "D:/qtmake/user/Adbms/user.h", "MU", "EWIEGA46WW/moc_user.cpp", null ]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/include",
-	"MOC_COMPILATION_FILE" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -433,30 +465,32 @@
 		"-c",
 		"D:/programs/mingw/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/Adbms_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/Adbms_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "F:/QT/6.7.3/mingw_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "F:/QT/6.7.3/mingw_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 7,
-	"SETTINGS_FILE" : "D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/Adbms_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/CMakeFiles/Adbms_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "D:/qtmake/Adbms/database.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/ddlparser.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/dmlparser.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/executor.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/lexer.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/login.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/main.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/mainwindow.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/parser.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/table.cpp", "MU", null ],
-		[ "D:/qtmake/Adbms/user.cpp", "MU", null ]
+		[ "D:/qtmake/user/Adbms/database.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/ddlparser.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/dmlparser.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/executor.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/global.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/lexer.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/login.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/main.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/mainwindow.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/parser.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/table.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/turple.cpp", "MU", null ],
+		[ "D:/qtmake/user/Adbms/user.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

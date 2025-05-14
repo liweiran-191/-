@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <Qdir>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +18,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_changeinui_clicked();
+    void on_uishow_clicked();
+
 private:
+    void loadDatabaseTree();
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

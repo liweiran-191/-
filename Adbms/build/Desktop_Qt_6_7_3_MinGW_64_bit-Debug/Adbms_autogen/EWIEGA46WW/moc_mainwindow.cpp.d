@@ -1,5 +1,5 @@
-D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/qtmake/Adbms/mainwindow.h \
-  D:/qtmake/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/moc_predefs.h \
+D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/qtmake/user/Adbms/mainwindow.h \
+  D:/qtmake/user/Adbms/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Adbms_autogen/moc_predefs.h \
   F:/QT/6.7.3/mingw_64/include/QtCore/q20functional.h \
   F:/QT/6.7.3/mingw_64/include/QtCore/q20memory.h \
   F:/QT/6.7.3/mingw_64/include/QtCore/q20type_traits.h \
